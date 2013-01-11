@@ -1,0 +1,16 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1>Notification Banner Settings</h1>
+
+<table>
+  <tr>
+    <td>Description:</td>
+    <td><%= @config[:description] %></td>
+  </tr>
+  <tr>
+    <td>Link:</td>
+    <td><%= @config[:link] %></td>
+  </tr>
+</table>
+
+<p><%= link_to_with_icon 'edit', t("edit"), edit_admin_notification_banner_settings_path %></p>

@@ -1,0 +1,21 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1>Notification Banner Settings</h1>
+
+<%= form_for(@config, :as => "notification_banner_configuration", :url => admin_notification_banner_settings_path, :method => :put) do |form| %>
+  <fieldset id="preferences">
+    <%= form.field_container :description do %>
+      <%= form.label(:description, "Description: ") + tag(:br) %>
+      <%= preference_field_tag(:description,  @config[:description], :type => :string) %>
+    <% end %>
+    <%= form.field_container :link do %>
+      <%= form.label(:link,"Link: ") + tag(:br) %>
+      <%= preference_field_tag(:link,  @config[:link], :type => :string) %>
+    <% end %>
+
+  </fieldset>
+  <p class="form-buttons">
+    <%= button t('update') %>
+    <%= t("or") %> <%= link_to t("cancel"), admin_notification_banner_settings_url %>
+  </p>
+<% end %>

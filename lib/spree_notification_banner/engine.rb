@@ -1,3 +1,5 @@
+module Spree::NotificationBanner; end
+
 module SpreeNotificationBanner
   class Engine < Rails::Engine
     require 'spree/core'
@@ -5,6 +7,10 @@ module SpreeNotificationBanner
     engine_name 'spree_notification_banner'
 
     config.autoload_paths += %W(#{config.root}/lib)
+
+    initializer "spree.active_shipping.preferences", :before => :load_config_initializers do |app|
+      Spree::NotificationBanner::Config = Spree::NotificationBannerConfiguration.new
+    end
 
     # use rspec for tests
     config.generators do |g|
