@@ -1,0 +1,12 @@
+<% description = Spree::NotificationBanner::Config[:description] %>
+<% if description.present? %>
+<% link = Spree::NotificationBanner::Config[:link] %>
+<div id="notification-banner">
+	<% if link.blank? %>
+		<%= description %>
+	<% else %>
+		<% options = link.start_with?('http') ? { :target => '_blank' } : {} %>
+		<%= link_to(description, link, options) %>
+	<% end %>
+</div>
+<% end %>
