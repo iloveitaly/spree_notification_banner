@@ -7,10 +7,10 @@ module SpreeNotificationBanner
       #   append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_notification_banner\n"
       # end
 
-      # def add_stylesheets
-      #   inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_notification_banner\n", :before => /\*\//, :verbose => true
-      #   inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_notification_banner\n", :before => /\*\//, :verbose => true
-      # end
+      def add_stylesheets
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_notification_banner\n", :before => /\*\//, :verbose => true
+        # inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_notification_banner\n", :before => /\*\//, :verbose => true
+      end
 
       # def add_migrations
       #   run 'bundle exec rake railties:install:migrations FROM=spree_notification_banner'
