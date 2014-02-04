@@ -1,13 +1,14 @@
 #notification-banner {
-	text-shadow:black 0 0 5px;
 	height:35px;
 	font-size:18px;
 	text-align:center;
 	line-height:35px;
+	overflow-y: hidden;
+	
 	color: white;
-
 	background-color: #666666;
 	border-bottom: 1px solid #404040;
+	text-shadow:black 0 0 5px;
 }
 
 #notification-banner a, #notification-banner a:visited, #notification-banner a:link, #notification-banner a:hover {
