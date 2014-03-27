@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'Michael Bianco'
   s.email     = 'info@cliffsidedev.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.homepage  = 'http://github.com/iloveitaly/spree_notification_banner'
 
   s.require_path = 'lib'
   s.requirements << 'none'
