@@ -5,6 +5,7 @@ describe "general functionality" do
     Spree::NotificationBanner::Config[:description] = nil
 
     visit spree.root_path
+
     page.should_not have_content("Banner Hello World")
     page.should_not have_css('#notification-banner')
   end
